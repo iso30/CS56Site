@@ -34,4 +34,14 @@ public class Application extends Controller {
     public Result cs(){
         return ok(cs.render(" "));
     }
+    public Result artHist(){
+        return ok(artHist.render(" "));
+    }
+
+    public Result chemistry(){
+        return ok(chemistry.render(" "));
+    }
+    public Result physics(){
+        return ok(physics.render(" "));
+    }
 }

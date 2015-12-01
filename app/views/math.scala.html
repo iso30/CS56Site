@@ -8,10 +8,13 @@
 
 
 	<div class="header">
-		<p class="banner">BOOKSITE</p>
-        <a href="/english">English</a>
+        <p class="banner">BOOKSITE</p>
+        <a href="/artHist">Art History</a>
+        <a href="/chemistry"> Chemistry</a>
         <a href="/cs">CS</a>
-	</div>
+        <a href="/english">English</a>
+        <a href="/physics">Physics</a>
+    </div>
     <p class="whichposts">Math posts:</p>
 	<div id="listings" class="allposts"></div>
     <form action="@routes.Application.addListing()" method="post">
@@ -20,10 +23,13 @@
     	<textarea name="personal"placeholder="Leave your contact information here." class="inputPersonal"></textarea><br>
     	Which Subject is this for?
     	<select name="subject">
-    		<option value="math">Math</option>
-    		<option value="english">English</option>
-    		<option value="cs">CS</option>
-    	</select><br>
+            <option value="math">Math</option>
+            <option value="english">English</option>
+            <option value="cs">CS</option>
+            <option value="artHist">Art History</option>
+            <option value="physics">Physics</option>
+            <option value="chemistry">Chemistry</option>
+        </select><br>
     	<button>Submit </button>
     </form>
 }

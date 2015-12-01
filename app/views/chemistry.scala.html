@@ -1,37 +1,36 @@
 @(message: String)
 
-@main("Booksite") {
+@main("Booksite"){
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script type='text/javascript' src="@routes.Assets.versioned("index.js")"></script>
+	<script type='text/javascript' src="@routes.Assets.versioned("chemistry.js")"></script>
 	<script type="text/javascript" src="@routes.Assets.versioned("main.js")"></script>
 	<link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("main.css")">
 
 
 	<div class="header">
-		<p class="banner">BOOKSITE</p>
+        <p class="banner">BOOKSITE</p>
         <a href="/artHist">Art History</a>
-        <a href="/chemistry"> Chemistry</a>
         <a href="/cs">CS</a>
         <a href="/english">English</a>
         <a href="/math">Math</a>
         <a href="/physics">Physics</a>
-	</div>
+    </div>
 
-    <p class="whichposts">Recent posts:</p>
-	<div id="listings" class="recentpost"></div>
+    <p class="whichposts">Physics posts:</p>
+	<div id="listings" class="allposts"></div>
     <form action="@routes.Application.addListing()" method="post">
     	<input type="text" name="title" placeholder="Enter a Title" class="inputTitle"/><br>
     	<textarea name="content" placeholder="Give us a brief description about your post." class="inputBody"></textarea><br>
     	<textarea name="personal"placeholder="Leave your contact information here." class="inputPersonal"></textarea><br>
     	Which Subject is this for?
     	<select name="subject">
-    		<option value="math">Math</option>
-    		<option value="english">English</option>
-    		<option value="cs">CS</option>
+            <option value="math">Math</option>
+            <option value="english">English</option>
+            <option value="cs">CS</option>
             <option value="artHist">Art History</option>
             <option value="physics">Physics</option>
             <option value="chemistry">Chemistry</option>
-    	</select><br>
+        </select><br>
     	<button>Submit </button>
     </form>
 }
