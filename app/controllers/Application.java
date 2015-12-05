@@ -6,6 +6,7 @@ import play.data.Form;
 import views.html.*;
 import play.db.ebean.Model;
 import java.util.List;
+import java.text.SimpleDateFormat;
 import static play.libs.Json.toJson;
 
 public class Application extends Controller {
@@ -16,6 +17,7 @@ public class Application extends Controller {
 
     public Result addListing(){
     	Listing listing = Form.form(Listing.class).bindFromRequest().get();
+        listing.setTimeStamp(new SimpleDateFormat("MM/dd/yyyy HH:mm:ss").format(new java.util.Date()));
     	listing.save();
     	return redirect(routes.Application.index());
     }

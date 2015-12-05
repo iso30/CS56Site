@@ -18,5 +18,9 @@ public class Listing extends Model{
 
 	public String subject;
 
-	String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
+	public String time_Stamp;
+
+	public void setTimeStamp(String timeStamp){
+		this.time_Stamp = timeStamp;
+	}
 }
