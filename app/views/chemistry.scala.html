@@ -7,16 +7,20 @@
 	<link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("main.css")">
 
 
-	<div class="header">
-        <p class="banner">BOOKSITE</p>
-        <a href="/artHist">Art History</a>
-        <a href="/cs">CS</a>
+	 <div class="header">
+        <a href="/" ><p style="margin-bottom:25px" class="banner">BOOKSITE</p></a>
+        <a href="/artHist">Art</a>
+        <a href="/biology">Biology</a>
+        <a href="/cs">Computer Science</a>
         <a href="/english">English</a>
+        <a href="/history">History</a>
         <a href="/math">Math</a>
-        <a href="/physics">Physics</a>
+        <a href="/music">Music</a>
+        <a href="/socialsci">Social Sciences</a>
+        <a href="/post">Make a Post</a>
     </div>
 
-    <p class="whichposts">Physics posts:</p>
+    <p class="whichposts">Chemistry posts:</p>
 	<div id="listings" class="allposts"></div>
     <form action="@routes.Application.addListing()" method="post">
     	<input type="text" name="title" placeholder="Enter a Title" class="inputTitle"/><br>
@@ -26,10 +30,13 @@
     	<select name="subject">
             <option value="math">Math</option>
             <option value="english">English</option>
-            <option value="cs">CS</option>
-            <option value="artHist">Art History</option>
-            <option value="physics">Physics</option>
+            <option value="cs">Computer Science</option>
+            <option value="artHist">Art</option>
+            <option value="physics">Biology</option>
             <option value="chemistry">Chemistry</option>
+            <option value="music">Music</option>
+            <option value="history">History</option>
+            <option value="socialsci">Social Science</option>
         </select><br>
     	<button>Submit </button>
     </form>

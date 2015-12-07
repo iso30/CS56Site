@@ -7,15 +7,47 @@
 
 
 	<div class="header">
-		<p class="banner">BOOKSITE</p>
-        <a href="/artHist">Art History</a>
+        <a href="/" ><p style="margin-bottom:25px" class="banner">BOOKSITE</p></a>
+        <a href="/artHist">Art</a>
+        <a href="/biology">Biology</a>
         <a href="/chemistry"> Chemistry</a>
-        <a href="/cs">CS</a>
+        <a href="/cs">Computer Science</a>
         <a href="/english">English</a>
+        <a href="/history">History</a>
         <a href="/math">Math</a>
-        <a href="/physics">Physics</a>
+        <a href="/music">Music</a>
+        <a href="/socialsci">Social Sciences</a>
+        <a href="/post">Make a Post</a>
 	</div>
-
+    <div class="imggrid" style="margin-top:20px;" align="center">
+        <a href="/artHist" alt="Art">
+            <img src="@routes.Assets.versioned("pictures/art.png")" >
+        </a>
+        <a href="/cs">
+            <img src="@routes.Assets.versioned("cs.png")" >
+        </a>
+        <a href="/english">
+            <img src="@routes.Assets.versioned("english.png")" >
+        </a><br>
+        <a href="/history" alt="Art">
+            <img src="@routes.Assets.versioned("history.png")" >
+        </a>
+        <a href="/math">
+            <img src="@routes.Assets.versioned("math.png")" >
+        </a>
+        <a href="/music">
+            <img src="@routes.Assets.versioned("music.png")" >
+        </a><br>
+        <a href="/biology" alt="Art">
+            <img src="@routes.Assets.versioned("sci2.jpg")" >
+        </a>
+        <a href="/chemistry">
+            <img src="@routes.Assets.versioned("science.png")" >
+        </a>
+        <a href="/socialsci">
+            <img src="@routes.Assets.versioned("socialsci.png")" >
+        </a><br>
+    </div>
     <p class="whichposts">Recent posts:</p>
 	<div id="listings" class="recentpost"></div>
     <form action="@routes.Application.addListing()" method="post">
@@ -26,10 +58,13 @@
     	<select name="subject">
     		<option value="math">Math</option>
     		<option value="english">English</option>
-    		<option value="cs">CS</option>
-            <option value="artHist">Art History</option>
-            <option value="physics">Physics</option>
+    		<option value="cs">Computer Science</option>
+            <option value="artHist">Art</option>
+            <option value="physics">Biology</option>
             <option value="chemistry">Chemistry</option>
+            <option value="music">Music</option>
+            <option value="history">History</option>
+            <option value="socialsci">Social Science</option>
     	</select><br>
     	<button>Submit </button>
     </form>

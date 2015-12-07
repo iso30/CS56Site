@@ -19,7 +19,15 @@ GET 	/artHist 					controllers.Application.artHist()
 
 GET 	/chemistry					controllers.Application.chemistry()
 
-GET 	/physics					controllers.Application.physics()
+GET 	/biology					controllers.Application.physics()
+
+GET 	/history					controllers.Application.history()
+
+GET 	/music					    controllers.Application.music()
+
+GET 	/socialsci					controllers.Application.socialsci()
+
+GET 	/post 						controllers.Application.makePost()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

@@ -2,25 +2,24 @@
 
 @main("Booksite"){
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script type='text/javascript' src="@routes.Assets.versioned("artHist.js")"></script>
-	<script type="text/javascript" src="@routes.Assets.versioned("main.js")"></script>
+	<script type='text/javascript' src="@routes.Assets.versioned("music.js")"></script>
 	<link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("main.css")">
 
 
-	 <div class="header">
+	<div class="header">
         <a href="/" ><p style="margin-bottom:25px" class="banner">BOOKSITE</p></a>
+        <a href="/artHist">Art</a>
         <a href="/biology">Biology</a>
         <a href="/chemistry"> Chemistry</a>
         <a href="/cs">Computer Science</a>
         <a href="/english">English</a>
         <a href="/history">History</a>
         <a href="/math">Math</a>
-        <a href="/music">Music</a>
         <a href="/socialsci">Social Sciences</a>
         <a href="/post">Make a Post</a>
     </div>
 
-    <p class="whichposts">Art History posts:</p>
+    <p class="whichposts">Music posts:</p>
 	<div id="listings" class="allposts"></div>
     <form action="@routes.Application.addListing()" method="post">
     	<input type="text" name="title" placeholder="Enter a Title" class="inputTitle"/><br>

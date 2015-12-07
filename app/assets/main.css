@@ -15,6 +15,20 @@
 #listing{
 	margin-right: 20px;
 }
+h3{
+	color: gray;
+	text-align: right;
+}
+h2{
+	font-size: 20px;
+}
+h1{
+	font-size: 36px;
+	font-weight: bold;
+}
+img{
+	margin: 20px;
+}
 html, body {
     margin: 0;
     padding: 0;

@@ -46,4 +46,17 @@ public class Application extends Controller {
     public Result physics(){
         return ok(physics.render(" "));
     }
+    public Result history(){
+        return ok(history.render(" "));
+    }
+
+    public Result music(){
+        return ok(music.render(" "));
+    }
+    public Result socialsci(){
+        return ok(socialsci.render(" "));
+    }
+     public Result makePost(){
+        return ok(post.render(" "));
+    }
 }
