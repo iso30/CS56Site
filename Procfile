@@ -1,1 +1,1 @@
-web: target/universal/stage/bin/my-first-app -Dhttp.port=$PORT $PLAY_OPTS
+web: target/universal/stage/bin/myapp -Dhttp.port=${PORT} -DapplyEvolutions.default=true -Ddb.default.driver=org.postgresql.Driver -Ddb.default.url=${DATABASE_URL}
