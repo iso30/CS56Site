@@ -4,11 +4,33 @@
 
 <html lang="en">
     <head>
-        <title>@title</title>
+        <title id="@title"></title>
         <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
         <script src="@routes.Assets.versioned("javascripts/hello.js")" type="text/javascript"></script>
     </head>
-    <body background="http://theartmad.com/wp-content/uploads/Grey-Background-5.jpg" background-repeat="repeat-x">
+    <body>
+    	<div class="header">
+        	<a href="/" ><p style='margin:15px;' class="banner">SMC Booksite</p></a>
+		</div>
+    	<p align='center'>Check out our book Sections!</p>
         @content
+        <form action="@routes.Application.addListing()" method="post">
+    	<input type="text" name="title" placeholder="Enter a Title" class="inputTitle"/><br>
+    	<textarea name="content" placeholder="Give us a brief description about your post." class="inputBody"></textarea><br>
+    	<textarea name="personal"placeholder="Leave your contact information here." class="inputPersonal"></textarea><br>
+    	Which Subject is this for?
+    	<select name="subject">
+    		<option value="math">Math</option>
+    		<option value="english">English</option>
+    		<option value="cs">Computer Science</option>
+            <option value="artHist">Art</option>
+            <option value="physics">Biology</option>
+            <option value="chemistry">Chemistry</option>
+            <option value="music">Music</option>
+            <option value="history">History</option>
+            <option value="socialsci">Social Science</option>
+    	</select><br>
+    	<button>Submit </button>
+    </form>
     </body>
 </html>

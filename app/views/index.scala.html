@@ -5,24 +5,23 @@
 	<script type='text/javascript' src="@routes.Assets.versioned("index.js")"></script>
 	<link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("main.css")">
     <link href='https://fonts.googleapis.com/css?family=Dancing+Script:700|Bilbo+Swash+Caps' rel='stylesheet' type='text/css'>
-
-	<div class="header">
-        <a href="/" ><p style="margin-bottom:25px; display:inline" class="banner">NOBookstore</p></a>
-        <p style="color:white; font-size:30px; position:absolute; margin-left: 30%;font-family: 'Dancing Script'"> "Not only the Bookstore has books" - Campus Chicken</p><br><br><br><br><br>
-        <a href="/artHist">Art</a>
-        <a href="/biology">Biology</a>
-        <a href="/chemistry"> Chemistry</a>
-        <a href="/cs">Computer Science</a>
-        <a href="/english">English</a>
-        <a href="/history">History</a>
-        <a href="/math">Math</a>
-        <a href="/music">Music</a>
-        <a href="/socialsci">Social Sciences</a>
-        <a href="/post">Make a Post</a>
-	</div>
-    <div class="imggrid" style="margin-top:20px;" align="center">
+    <div id='navbar'>
+        <ul>
+            <li><a href="/artHist">Art</a> </li>
+            <li><a href="/biology">Biology</a> </li>
+            <li><a href="/chemistry"> Chemistry</a> </li>
+            <li><a href="/cs">Computer Science</a> </li>
+            <li><a href="/english">English</a> </li>
+            <li><a href="/history">History</a></li>
+            <li><a href="/math">Math</a></li>
+            <li><a href="/music">Music</a></li>
+            <li><a href="/socialsci">Social Sciences</a></li>
+            <li><a href="/post">Make a Post</a></li>
+        </ul>
+    </div>
+    <div id="imggrid" style="margin-top:20px;" align="center">
         <a href="/artHist" alt="Art">
-            <img src="@routes.Assets.versioned("pictures/art.png")" >
+            <img src="@routes.Assets.versioned("pictures/art.png")">
         </a>
         <a href="/cs">
             <img src="@routes.Assets.versioned("pictures/cs.png")" >
@@ -49,24 +48,6 @@
             <img src="@routes.Assets.versioned("pictures/socialsci.png")" >
         </a><br>
     </div>
-    <p class="whichposts">Recent posts:</p>
+    <p id="recentpost">Recent Posts</p>
 	<div id="listings" class="recentpost"></div>
-    <form action="@routes.Application.addListing()" method="post">
-    	<input type="text" name="title" placeholder="Enter a Title" class="inputTitle"/><br>
-    	<textarea name="content" placeholder="Give us a brief description about your post." class="inputBody"></textarea><br>
-    	<textarea name="personal"placeholder="Leave your contact information here." class="inputPersonal"></textarea><br>
-    	Which Subject is this for?
-    	<select name="subject">
-    		<option value="math">Math</option>
-    		<option value="english">English</option>
-    		<option value="cs">Computer Science</option>
-            <option value="artHist">Art</option>
-            <option value="physics">Biology</option>
-            <option value="chemistry">Chemistry</option>
-            <option value="music">Music</option>
-            <option value="history">History</option>
-            <option value="socialsci">Social Science</option>
-    	</select><br>
-    	<button>Submit </button>
-    </form>
 }

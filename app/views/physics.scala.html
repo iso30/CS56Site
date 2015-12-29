@@ -7,37 +7,21 @@
 	<link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("main.css")">
 
 
-	 <div class="header">
-        <a href="/" ><p style="margin-bottom:25px" class="banner">NOBookstore</p></a>
-        <a href="/artHist">Art</a>
-        <a href="/chemistry"> Chemistry</a>
-        <a href="/cs">Computer Science</a>
-        <a href="/english">English</a>
-        <a href="/history">History</a>
-        <a href="/math">Math</a>
-        <a href="/music">Music</a>
-        <a href="/socialsci">Social Sciences</a>
-        <a href="/post">Make a Post</a>
+	<div id='navbar'>
+        <ul>
+            <li><a href="/artHist">Art</a> </li>
+            <li><a href="">Biology</a> </li>
+            <li><a href="/chemistry"> Chemistry</a> </li>
+            <li><a href="/cs">Computer Science</a> </li>
+            <li><a href="/english">English</a> </li>
+            <li><a href="/history">History</a></li>
+            <li><a href="/math">Math</a></li>
+            <li><a href="/music">Music</a></li>
+            <li><a href="/socialsci">Social Sciences</a></li>
+            <li><a href="/post">Make a Post</a></li>
+        </ul>
     </div>
 
-    <p class="whichposts">Biology posts:</p>
+    <p id='recentpost'>Biology Posts</p>
 	<div id="listings" class="allposts"></div>
-    <form action="@routes.Application.addListing()" method="post">
-    	<input type="text" name="title" placeholder="Enter a Title" class="inputTitle"/><br>
-    	<textarea name="content" placeholder="Give us a brief description about your post." class="inputBody"></textarea><br>
-    	<textarea name="personal"placeholder="Leave your contact information here." class="inputPersonal"></textarea><br>
-    	Which Subject is this for?
-    	<select name="subject">
-            <option value="math">Math</option>
-            <option value="english">English</option>
-            <option value="cs">Computer Science</option>
-            <option value="artHist">Art</option>
-            <option value="physics">Biology</option>
-            <option value="chemistry">Chemistry</option>
-            <option value="music">Music</option>
-            <option value="history">History</option>
-            <option value="socialsci">Social Science</option>
-        </select><br>
-    	<button>Submit </button>
-    </form>
 }
