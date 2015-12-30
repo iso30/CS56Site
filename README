@@ -5,4 +5,4 @@ The premice of this was to create a project of my choice for my Advanced Java cl
 The purpose of this is so students at SMC can have a place to post their book listings and other students can meet up to trade or bargan for these books. This RESTful site is built with Play Framework 2.4.x. and is configured with MySQL and JavaEbean. Each section of the app folder should have its respective README's or be well commented to be able to work with.
 
 Preview:
-![alt tag](https://raw.github.com/iso30/CS56Site/app/assets/pictures/Site.png)
+![alt tag](https://raw.github.com/iso30/CS56Site/tree/master/app/assets/pictures/Site.png)
