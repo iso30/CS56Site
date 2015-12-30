@@ -11,10 +11,13 @@ import static play.libs.Json.toJson;
 
 public class Application extends Controller {
 
+    //Renders the main page
     public Result index() {
-        return ok(index.render("Your new application is ready."));
+        return ok(index.render(""));
     }
 
+    //Upon form submission, Play creates a new Model of Listing to store in the database
+    // then redirects the client to the index page
     public Result addListing(){
     	Listing listing = Form.form(Listing.class).bindFromRequest().get();
         listing.setTimeStamp(new SimpleDateFormat("MM/dd/yyyy HH:mm:ss").format(new java.util.Date()));
@@ -22,10 +25,14 @@ public class Application extends Controller {
     	return redirect(routes.Application.index());
     }
 
+    //Gets the Listing instances to call POST method so store the JSON at "/listings"
+    //Javascript can then parse and use the scripts accordingly
     public Result getListings(){
     	List<Listing> listings = new Model.Finder(String.class, Listing.class).all();
     	return ok(toJson(listings));
     }
+
+    //Renders each of the subject pages with thier respective paths
     public Result math(){
         return ok(math.render(" "));
     }

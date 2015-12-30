@@ -1,0 +1,1 @@
+Each one of these views are scala embeded html to accept any params that may come from the Play format. The "main.scala.html" acts as a container view to keep things DRY. It contains html elements that are common among all pages. The rest of the pages contain html that is uniqe to that page.

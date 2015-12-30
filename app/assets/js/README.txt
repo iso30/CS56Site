@@ -1,0 +1,1 @@
+All these scripts do very similar things but with different subjects. First we use jQuery's .get method to get the Json information. Then for each post the Json is parsed and posted if the subject matches the page's subject. The "index.js" is a bit different where is keeps a counter for each posted so only posts are shown.

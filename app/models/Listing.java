@@ -7,6 +7,7 @@ import java.sql.*;
 import java.text.SimpleDateFormat;
 @Entity
 public class Listing extends Model{
+	//Creates the data fields, corresponding with the form fields. Time stamp is added by the server.
 	@Id
 	public String id;
 
